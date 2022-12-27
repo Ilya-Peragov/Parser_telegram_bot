@@ -11,5 +11,5 @@ def parser(url):
     r = requests.get(url)
     html = r.text
     soup = bs(html, 'html.parser')
-    version = soup.find_all('', class_="")
+    version = soup.find_all('div', class_="")
     return version[0].text
